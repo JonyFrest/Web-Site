@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JonyFrest | Креативный разработчик</title>
+    <meta name="description"
+        content="JonyFrest – Creative Content and Frontend Developer. A user-focused, strategic approach.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="font-inter antialiased bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#home"
+                    class="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300">
+                    JonyFrest
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                        data-translate="nav-home">Главная</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                        data-translate="nav-about">Обо мне</a>
+                    <a href="#services"
+                        class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                        data-translate="nav-services">Услуги</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300"
+                        data-translate="nav-contact">Контакты</a>
+
+                    <!-- Language Switcher -->
+                    <div class="language-switcher flex items-center space-x-2 ml-4">
+                        <button class="lang-btn active" data-lang="ru" title="Русский">RU</button>
+                        <span class="text-gray-400">|</span>
+                        <button class="lang-btn" data-lang="en" title="English">EN</button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button
+                    class="md:hidden mobile-menu-btn p-2 rounded-md hover:bg-gray-100 transition-colors duration-300"
+                    id="mobile-menu-btn">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden mobile-menu hidden bg-white border-t border-gray-100" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home"
+                    class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-all duration-300"
+                    data-translate="nav-home">Главная</a>
+                <a href="#about"
+                    class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-all duration-300"
+                    data-translate="nav-about">Обо мне</a>
+                <a href="#services"
+                    class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-all duration-300"
+                    data-translate="nav-services">Услуги</a>
+                <a href="#contact"
+                    class="mobile-nav-link block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-all duration-300"
+                    data-translate="nav-contact">Контакты</a>
+
+                <!-- Mobile Language Switcher -->
+                <div
+                    class="language-switcher flex items-center justify-center space-x-2 pt-4 border-t border-gray-100 mt-4">
+                    <button class="lang-btn active" data-lang="ru" title="Русский">RU</button>
+                    <span class="text-gray-400">|</span>
+                    <button class="lang-btn" data-lang="en" title="English">EN</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="fade-in-up">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                    JonyFrest
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto" data-translate="hero-subtitle">
+                    Разработчик креативного контента и Frontend-разработки
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="#contact"
+                        class="btn-primary inline-flex items-center px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-envelope mr-2"></i>
+                        <span data-translate="hero-contact">Связаться со мной</span>
+                    </a>
+                    <a href="#about"
+                        class="btn-secondary inline-flex items-center px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-full hover:border-gray-400 hover:bg-gray-50 transition-all duration-300">
+                        <i class="fas fa-user mr-2"></i>
+                        <span data-translate="hero-learn-more">Узнать больше</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Animated Icons -->
+            <div class="flex justify-center space-x-8 mt-16">
+                <div class="floating-icon">
+                    <i class="fab fa-js-square text-4xl text-yellow-500"></i>
+                </div>
+                <div class="floating-icon animation-delay-1">
+                    <i class="fab fa-react text-4xl text-blue-500"></i>
+                </div>
+                <div class="floating-icon animation-delay-2">
+                    <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
+                </div>
+                <div class="floating-icon animation-delay-3">
+                    <i class="fas fa-code text-4xl text-gray-600"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div
+                class="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+            </div>
+            <div
+                class="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2">
+            </div>
+            <div
+                class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-translate="about-title">Обо мне</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="about-subtitle">
+                    Творческий и разносторонний специалист с навыками написания контента, управления проектами и
+                    разработки frontend-приложений
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-left">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6" data-translate="about-approach-title">Мой
+                        подход</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-translate="about-approach-text1">
+                        Я применяю стратегический подход, ориентированный на пользователя, создавая решения, которые не
+                        только выглядят великолепно, но и обеспечивают исключительный пользовательский опыт.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed" data-translate="about-approach-text2">
+                        Начав свою деятельность 23 Апреля 2023 года, я сосредоточен на создании современных, адаптивных
+                        и производительных веб-приложений.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-tag px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                            data-translate="about-skill-frontend">Frontend Development</span>
+                        <span class="skill-tag px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium"
+                            data-translate="about-skill-content">Content Creation</span>
+                        <span class="skill-tag px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium"
+                            data-translate="about-skill-management">Project Management</span>
+                        <span class="skill-tag px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium"
+                            data-translate="about-skill-design">UX/UI Design</span>
+                    </div>
+                </div>
+
+                <div class="fade-in-right">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div
+                            class="skill-card p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                            <div class="text-blue-600 text-3xl mb-4">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2" data-translate="about-card-dev-title">
+                                Разработка</h4>
+                            <p class="text-gray-600 text-sm" data-translate="about-card-dev-desc">Современные
+                                веб-технологии и фреймворки</p>
+                        </div>
+
+                        <div
+                            class="skill-card p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                            <div class="text-green-600 text-3xl mb-4">
+                                <i class="fas fa-pen-fancy"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2"
+                                data-translate="about-card-content-title">Контент</h4>
+                            <p class="text-gray-600 text-sm" data-translate="about-card-content-desc">Креативное
+                                написание и стратегия контента</p>
+                        </div>
+
+                        <div
+                            class="skill-card p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                            <div class="text-purple-600 text-3xl mb-4">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2"
+                                data-translate="about-card-management-title">Управление</h4>
+                            <p class="text-gray-600 text-sm" data-translate="about-card-management-desc">Эффективное
+                                управление проектами</p>
+                        </div>
+
+                        <div
+                            class="skill-card p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                            <div class="text-orange-600 text-3xl mb-4">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-900 mb-2"
+                                data-translate="about-card-design-title">Дизайн</h4>
+                            <p class="text-gray-600 text-sm" data-translate="about-card-design-desc">Пользовательский
+                                интерфейс и опыт</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-translate="services-title">Услуги
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="services-subtitle">
+                    Профессиональные услуги по разработке и созданию контента
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+                <div
+                    class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 fade-in-left">
+                    <div class="text-blue-600 text-5xl mb-6">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="service-frontend-title">
+                        Frontend-разработка</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-translate="service-frontend-desc">
+                        Создание современных, отзывчивых и производительных веб-приложений с использованием передовых
+                        технологий и лучших практик разработки.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-frontend-item1">Адаптивная верстка</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-frontend-item2">Современные фреймворки</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-frontend-item3">Оптимизация производительности</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-frontend-item4">Кроссбраузерная совместимость</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="service-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 fade-in-right">
+                    <div class="text-purple-600 text-5xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="service-content-title">Креативный
+                        контент</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed" data-translate="service-content-desc">
+                        Разработка стратегии контента, создание уникальных текстов и визуальных материалов, которые
+                        эффективно передают ваше сообщение аудитории.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-content-item1">Стратегия контента</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-content-item2">Копирайтинг</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-content-item3">Визуальный контент</span>
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-3"></i>
+                            <span data-translate="service-content-item4">Управление проектами</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="service-card landing-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 fade-in-left">
+                    <div class="text-white text-5xl mb-6">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="service-landing-title">
+                        Лендинг-страницы</h3>
+                    <p class="text-gray-100 mb-4 leading-relaxed" data-translate="service-landing-desc">
+                        Одностраничные сайты с высокой конверсией для вашего бизнеса.
+                    </p>
+                    <div class="service-price text-3xl font-bold mb-4" data-translate="service-landing-price">от $50
+                    </div>
+                    <p class="text-gray-200 text-sm mb-4" data-translate="service-landing-note">
+                        Нет дизайна? Можно заказать UI/UX от компании
+                        <a href="https://www.AbexLab.com" target="_blank"
+                            class="abexlab-link text-yellow-300 hover:text-yellow-200">www.AbexLab.com</a>
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-landing-item1">Высокая конверсия</span>
+                        </li>
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-landing-item2">Быстрая загрузка</span>
+                        </li>
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-landing-item3">SEO оптимизация</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="service-card backend-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 fade-in-right">
+                    <div class="text-white text-5xl mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4" data-translate="service-backend-title">
+                        Backend-разработка</h3>
+                    <p class="text-gray-100 mb-4 leading-relaxed" data-translate="service-backend-desc">
+                        Серверная разработка от компании
+                        <a href="https://www.AbexLab.com" target="_blank"
+                            class="abexlab-link text-yellow-200 hover:text-yellow-100">AbexLab</a>
+                    </p>
+                    <div class="service-price text-2xl font-bold mb-4" data-translate="service-backend-price">По запросу
+                    </div>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-backend-item1">API разработка</span>
+                        </li>
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-backend-item2">База данных</span>
+                        </li>
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-backend-item3">Безопасность</span>
+                        </li>
+                        <li class="flex items-center text-gray-100">
+                            <i class="fas fa-check text-green-300 mr-3"></i>
+                            <span data-translate="service-backend-item4">Масштабируемость</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pricing -->
+            <div class="text-center bg-white p-8 rounded-2xl shadow-lg fade-in-up">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="pricing-title">Стоимость услуг</h3>
+                <div class="text-5xl font-bold text-blue-600 mb-2">$30</div>
+                <p class="text-gray-600 mb-6" data-translate="pricing-rate">USD в час</p>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-translate="pricing-desc">
+                    Прозрачное ценообразование без скрытых платежей. Оплата по факту выполненной работы с возможностью
+                    фиксированной стоимости проекта.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6" data-translate="contact-title">Контакты
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-translate="contact-subtitle">
+                    Готов обсудить ваш проект и воплотить ваши идеи в жизнь
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="contact-item p-6 rounded-xl hover:bg-gray-50 transition-all duration-300 fade-in-up">
+                    <a href="mailto:jonyfrestuz@gmail.com"
+                        class="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                        <div class="text-blue-600 text-4xl mb-4">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2" data-translate="contact-email-title">Email
+                        </h3>
+
+                        jonyfrestuz@gmail.com
+                    </a>
+                </div>
+
+                <div
+                    class="contact-item p-6 rounded-xl hover:bg-gray-50 transition-all duration-300 fade-in-up animation-delay-1">
+                    <a href="https://t.me/jonyfrest"
+                        class="text-gray-600 hover:text-green-600 transition-colors duration-300">
+                        <div class="text-green-600 text-4xl mb-4">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2" data-translate="contact-telegram-title">
+                            Telegram</h3>
+
+                        https://t.me/Jony_Frest
+                    </a>
+                </div>
+
+                <div
+                    class="contact-item p-6 rounded-xl hover:bg-gray-50 transition-all duration-300 fade-in-up animation-delay-2">
+                    <a href="https://github.com/jonyfrest"
+                        class="text-gray-600 hover:text-purple-600 transition-colors duration-300">
+                        <div class="text-purple-600 text-4xl mb-4">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2" data-translate="contact-github-title">
+                            GitHub
+                        </h3>
+
+                        https://github.com/JonyFrest
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 fade-in-up">
+                <a href="mailto:jonyfrestuz@gmail.com"
+                    class="btn-primary inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 text-lg">
+                    <i class="fas fa-paper-plane mr-3"></i>
+                    <span data-translate="contact-button">Начать проект</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">JonyFrest</h3>
+                <p class="text-gray-400 mb-6" data-translate="footer-tagline">Разработчик креативного контента и
+                    frontend-разработки</p>
+
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:jonyfrestuz@gmail.com"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="https://t.me/jony_frest"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-telegram text-xl"></i>
+                    </a>
+                    <a href="https://github.com/jonyfrest"
+                        class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+
+                <p class="text-gray-500 text-sm">
+                    <span data-translate="footer-copyright">© 2025 JonyFrest. Все права защищены.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
